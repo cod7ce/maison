@@ -30,7 +30,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'mongoid'
+gem "mongoid", github: 'mongoid/mongoid', ref: '11e45e5a30a45458b83db99ab6c9d9ccc337e66f'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
