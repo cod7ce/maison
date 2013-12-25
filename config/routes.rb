@@ -53,4 +53,11 @@ Maison::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  namespace :admin do
+    resources :posts
+    # 用户登录与注销
+    get 'login' => 'sessions#new', :as => 'login'
+    post 'login' => 'sessions#create', :as => 'post_login'
+    get 'logout' => 'sessions#destroy', :as => 'logout'
+  end
 end
