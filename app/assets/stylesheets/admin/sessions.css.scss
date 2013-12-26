@@ -1,3 +1,22 @@
 // Place all the styles related to the admin::sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.login-box{
+  width: 70%;
+  margin: 0 auto;
+  .login-panel{
+    padding: 45px 15px 15px 15px;
+    margin: 50px auto;
+    width: 400px;
+    &:before{
+      content: 'Login Panel';
+      position: relative;
+      top: -15px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #bbb;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}

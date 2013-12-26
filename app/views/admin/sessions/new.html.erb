@@ -1,0 +1,9 @@
+<div class="login-box">
+  <div class="login-panel">
+    <%= simple_form_for [:admin, @user], :url => admin_post_login_path, :html => {:method => 'post', :class=>'form'} do |f| %>
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.button :submit, :value => 'Enjoy', :class => 'btn-default', :style => 'margin:50px 110px;width:150px;' %>
+    <% end %>
+  </div>
+</div>

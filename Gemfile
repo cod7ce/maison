@@ -31,6 +31,12 @@ group :doc do
 end
 
 gem "mongoid", github: 'mongoid/mongoid', ref: '11e45e5a30a45458b83db99ab6c9d9ccc337e66f'
+
+gem "bootstrap-sass", '~> 3.0.3.0'
+gem "simple_form"
+
+gem "will_paginate"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
