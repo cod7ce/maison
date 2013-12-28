@@ -6,6 +6,7 @@ class Admin::SessionsController < ApplicationController
 
   def create
     @user = User.new()
+    # 是不是多少处理下，人家都说是mass assignment
     @user.email = params[:user][:email]
     @user.password = params[:user][:password]
 
