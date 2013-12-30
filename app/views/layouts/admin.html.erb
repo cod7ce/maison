@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="admin">
 <head>
   <title>纸房子后台管理</title>
   <!--这里加入SEO相关标签-->
@@ -9,8 +9,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%= render 'layouts/admin/header'%>
+  <div class="container">
+    <%= render 'layouts/admin/crumb' %>
+    <div class="row">
+        <%= yield %>
+    </div>
+  </div>
+  <%= render 'layouts/admin/footer' %>
 </body>
 </html>

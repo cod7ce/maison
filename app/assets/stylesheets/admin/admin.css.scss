@@ -1,0 +1,67 @@
+// Place all the styles related to the Admin::Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$header-height: 60px;
+html.admin{
+  body{
+    padding-top: $header-height;
+  }
+  header{
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   height: $header-height;
+   background: rgba(255, 255, 255, 0.8);
+   z-index: 1000;
+   border-bottom: 1px solid rgba(12, 56, 92, 0.1);
+   h4{
+    float: left;
+    margin-top: 20px;
+    margin-left: 8px;
+    font-size: 20px;
+   }
+   p.navbar-right{
+    margin-top:23px;
+    margin-right: 10px !important;
+    a{
+      color: #ccc;
+    }
+   }
+  }
+  
+  div.container{
+      .breadcrumb{
+        margin-top: 20px;
+        background: aliceblue;
+        box-shadow: 0 7px 0 -2px rgba(12, 56, 92, 0.1);
+      }
+      .thumbnail{
+        box-shadow: 0 7px 0 -2px rgba(12, 56, 92, 0.1);
+      }
+      div.blog-model, div.code-model, div.share-model{
+        background: #1abc9c;
+        text-align: center;
+        height: 150px;
+        line-height: 150px;
+        a{
+          color: white;
+          font-size:36px;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+      div.code-model{
+        background: #2d89ef;
+      }
+      div.share-model{
+        background: #f34b3a;
+      }
+  }
+  footer{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+}

@@ -12,7 +12,7 @@ class Admin::SessionsController < ApplicationController
 
     if @user.auth?
       session[:user_id] = @user.id
-      redirect_to admin_posts_path
+      redirect_to admin_root_path
     else
       render :action => 'new', :layout => 'login'
     end
