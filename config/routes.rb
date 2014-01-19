@@ -53,6 +53,14 @@ Maison::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # 前台路由
+  root :to => 'home#index'
+  get 'about' => 'home#about', :as => 'about'
+  resources :posts, :only => ['index', 'show']
+  resources :gists, :only => ['index', 'show']
+
+  # 后台路由
   namespace :admin do
     root :to => 'home#index'
     resources :posts

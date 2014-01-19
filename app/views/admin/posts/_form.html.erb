@@ -1,0 +1,10 @@
+<div class="col-md-12">
+  <%= simple_form_for [:admin, @post], :html => {:class => 'form'} do |f| %>
+    <%= f.input :title %>
+    <%= f.input :summary %>
+    <%= f.input :category %>
+    <%= f.input :tags %>
+    <%= f.input :content %>
+    <%= f.input :user, :as => :hidden %>
+  <% end %>
+</div>
