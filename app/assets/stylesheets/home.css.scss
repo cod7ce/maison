@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @font-face{
   font-family: mouse;
-  src: url('assets/Mouse.otf');
+  src: url('/assets/Mouse.otf');
 }
 $front-header-height: 100px;
 html.front{
@@ -34,6 +34,17 @@ html.front{
     &:hover{
       color: #7e8aa7;
       border-color: #e0e3ec;
+    }
+  }
+  .section{
+    margin-bottom: 0;
+    }
+  .wrapper{
+    margin: auto;
+    max-width: 600px;
+    vertical-align: middle;
+    p{
+      line-height: 2em;
     }
   }
   .header-wrapper{
@@ -79,7 +90,7 @@ html.front{
   }
     .jumbotron{
       background: white;
-      h1{
+      h1,h2{
         color: #737c93;
         margin-bottom: 30px;
         letter-spacing: 0.2em;
@@ -115,7 +126,7 @@ html.front{
     }
   }
   .daily-wall, .analog-clock{
-    background: #ffd42f;
+    background: #ffd800;
     color: white;
     padding: 120px 50px;
     h1{
