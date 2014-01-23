@@ -56,7 +56,7 @@
 			var element = $('.section.active');
 				
 			if(options.autoScrolling){
-				$('html, body').css({
+				$('body').css({
 					'overflow' : 'hidden',
 					'height' : '100%'
 				});

@@ -1,10 +1,11 @@
 <div class="col-md-12">
-  <%= simple_form_for [:admin, @post], :html => {:class => 'form'} do |f| %>
+  <%= simple_form_for [:admin, @post], :html => {:class => 'form-horizontal'} do |f| %>
     <%= f.input :title %>
-    <%= f.input :summary %>
-    <%= f.input :category %>
+    <%= f.input :summary, :as => :text %>
+    <%= f.input :category, :collection => Category.all, :include_blank => false %>
     <%= f.input :tags %>
-    <%= f.input :content %>
+    <%= f.input :content, :as => :text, :input_html => { rows: 15} %>
     <%= f.input :user, :as => :hidden %>
+    <%= f.submit %>
   <% end %>
 </div>

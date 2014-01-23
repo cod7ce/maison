@@ -3,5 +3,5 @@ class Category
   field :name, type: String
   field :code, type: String
 
-  belongs_to :post
+  has_many :posts
 end

@@ -13,7 +13,9 @@ html.front{
   }
   body{
     background: white;
-    padding-top: $front-header-height;
+  }
+  .head-margin{
+    margin-top: $front-header-height;
   }
   .text-center{
     text-align: center;
@@ -45,6 +47,7 @@ html.front{
     vertical-align: middle;
     p{
       line-height: 2em;
+      color: #737c93 !important;
     }
   }
   .header-wrapper{
@@ -71,7 +74,7 @@ html.front{
         transition: .3s;
         cursor: pointer;
         &:hover{
-          background: rgba(94, 213, 235, 0.13);
+          background:rgba(106, 174, 227, 0.13); 
           a {
             color: #3cc7e7;
           }
@@ -101,7 +104,7 @@ html.front{
       }
     }
   .my-words{
-    background: #2fd5fd;
+    background: #6aaee3;
     padding: 120px 50px;
     text-align: center;
     color: white;
@@ -126,19 +129,21 @@ html.front{
     }
   }
   .daily-wall, .analog-clock{
-    background: #ffd800;
+    background: #a06ae3;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
     color: white;
-    padding: 120px 50px;
+    padding: 100px 50px;
     h1{
-      margin-top: 80px;
-      font-size: 80px;
+      margin-top: 50px;
+      font-size: 30px;
     }
     span {
       font-size: 240px;
     }
   }
   .analog-clock{
-    background: #e23ba1;
+    background: #f27184;
   }
 
   .footer-wrapper{

@@ -1,2 +1,23 @@
-<%= @init %>
-<%= @auth %>
+<%= link_to '添加', new_admin_post_path %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>序列</td>
+      <td>标题</td>
+      <td>类别</td>
+      <td>标签</td>
+      <td>操作</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each_with_index do |post, i| %>
+      <tr>
+        <td><%= i+1  %></td>
+        <td><%= post.title  %></td>
+        <td><%= post.category.name %></td>
+        <td><%= post.tags.join(',') if post.tags %></td>
+        <td><%= link_to '更新', edit_admin_post_path(post) %> <%= link_to '删除', admin_post_path(post), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
