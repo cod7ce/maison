@@ -1,0 +1,16 @@
+<div class="head-margin"></div>
+<div class="container">
+  <div class="row">
+    <article>
+      <header>
+        <h1 class="title"><%= @post.title %></h1>
+        <div>
+          <%= @post.tags.try(:join, ',') %>
+          <%= @post.category.name %>
+          <%= @post.user.realname %>
+        </div>
+      </header>
+      <%= raw markdown(@post.content) %>
+    </article>
+  </div>
+</div>

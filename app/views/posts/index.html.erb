@@ -1,2 +1,10 @@
 <div class="head-margin"></div>
-
+<div class="container">
+  <div class="row">
+    <ul>
+    <% @posts.each_with_index do |post,i| %>
+      <li><%= link_to post.title, post_path(post) %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>

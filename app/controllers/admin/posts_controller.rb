@@ -1,6 +1,6 @@
 class Admin::PostsController < Admin::ApplicationController 
   def index
-    @posts = Post.page(params[:page])
+    @posts = Post.where(user: current_user).page(params[:page])
   end
 
   def new
@@ -10,6 +10,7 @@ class Admin::PostsController < Admin::ApplicationController
   def create
     @post = Post.new
     @post.construire_post(params[:post])
+    @post.user = current_user
     if @post.save()
       redirect_to admin_posts_path
     else
@@ -19,7 +20,6 @@ class Admin::PostsController < Admin::ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    @post.tags = @post.tags.join(',') if @post.tags
   end
 
   def update
