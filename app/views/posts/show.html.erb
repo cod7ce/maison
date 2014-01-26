@@ -4,13 +4,22 @@
     <article>
       <header>
         <h1 class="title"><%= @post.title %></h1>
-        <div>
-          <%= @post.tags.try(:join, ',') %>
-          <%= @post.category.name %>
-          <%= @post.user.realname %>
+        <div class="article-info">
+          <ul>
+            <li>
+              <span class="glyphicon glyphicon-tags"></span>
+              <% @post.tags.each do |tag| %>
+                <%= link_to tag,posts_path %>
+              <% end %>
+            </li>
+            <li><span class="glyphicon glyphicon-th-large"></span><%= link_to @post.category.name, posts_path %></li>
+            <li><span class="glyphicon glyphicon-user"></span><%= @post.user.realname %></li>
+          </ul>
         </div>
       </header>
-      <%= raw markdown(@post.content) %>
+      <div class="article-content">
+        <%= raw markdown(@post.content) %>
+      </div>
     </article>
   </div>
 </div>

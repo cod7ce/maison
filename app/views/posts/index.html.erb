@@ -1,10 +1,22 @@
 <div class="head-margin"></div>
 <div class="container">
   <div class="row">
-    <ul>
     <% @posts.each_with_index do |post,i| %>
-      <li><%= link_to post.title, post_path(post) %></li>
+    <% 10.times do |i| %>
+      <section class="<%= i%2==0 ? post.category.name : 'node' %>">
+        <div class="date">
+          <p class="day">24</p>
+          <p class="year">2013-01</p>
+        </div>
+        <p class="title"><%= link_to post.title, post_path(post) %></p>
+        <p class="summary"><%= post.summary %>
+        <div class="info">
+          <p class="tags">24</p>
+          <p class="category">2013-01</p>
+          <p class="user">2013-01</p>
+        </div>
+      </section>
+      <% end %>
     <% end %>
-    </ul>
   </div>
 </div>
