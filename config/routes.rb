@@ -64,6 +64,7 @@ Maison::Application.routes.draw do
   namespace :admin do
     root :to => 'home#index'
     resources :posts
+    resources :categories
     # 用户登录与注销
     get 'login' => 'sessions#new', :as => 'login'
     post 'login' => 'sessions#create', :as => 'post_login'

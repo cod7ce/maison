@@ -1,0 +1,22 @@
+<%= link_to '添加', new_admin_category_path %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>序列</td>
+      <td>名称</td>
+      <td>代码</td>
+      <td>操作</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each_with_index do |category, i| %>
+      <tr>
+        <td><%= i+1  %></td>
+        <td><%= category.name %></td>
+        <td><%= category.code %></td>
+        <td><%= link_to '更新', edit_admin_category_path(category) %> <%= link_to '删除', admin_category_path(category), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @categories %>

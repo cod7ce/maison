@@ -1,0 +1,7 @@
+<div class="col-md-12">
+  <%= simple_form_for [:admin, @category], :html => {:class => 'form-horizontal'} do |f| %>
+    <%= f.input :name %>
+    <%= f.input :code %>
+    <%= f.submit %>
+  <% end %>
+</div>
