@@ -26,7 +26,7 @@ html.front{
       left: 0;
       top: 0;
       width: 110px;
-      height: 100%;
+      height: 105px;
       background: #a06ae3;
       color: white;
       text-align: center;
@@ -60,7 +60,17 @@ html.front{
       background: #a06ae3;
     }
   }
-  section.Ruby{
+  section.tool{
+    .title{
+      a{
+        color: #257ec3;
+      }
+    }
+    .date{
+      background: #6bafe3;
+    }
+  }
+  section.ruby{
     .title{
       a{
         color: #d82943;
@@ -122,6 +132,7 @@ html.front{
     .article-content{
       color: #454545;
       padding: 15px 30px;
+      line-height: 1.5em;
     }
     a {
       color: #4183C4; 

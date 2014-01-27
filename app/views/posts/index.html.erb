@@ -2,11 +2,10 @@
 <div class="container">
   <div class="row">
     <% @posts.each_with_index do |post,i| %>
-    <% 10.times do |i| %>
-      <section class="<%= i%2==0 ? post.category.name : 'node' %>">
+      <section class="<%= post.category.code %>">
         <div class="date">
-          <p class="day">24</p>
-          <p class="year">2013-01</p>
+          <p class="day"><%= post.created_at.day %></p>
+          <p class="year"><%= post.created_at.strftime('%Y-%m') %></p>
         </div>
         <p class="title"><%= link_to post.title, post_path(post) %></p>
         <p class="summary"><%= post.summary %>
@@ -16,7 +15,6 @@
           <p class="user">2013-01</p>
         </div>
       </section>
-      <% end %>
     <% end %>
   </div>
 </div>
