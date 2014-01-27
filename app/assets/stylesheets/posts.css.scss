@@ -3,10 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html.front{
   section{
-    margin: 20px 40px;
-    padding: 20px 30px 50px 100px;
+    margin: 0px 40px;
+    padding: 40px 30px 50px 100px;
     border-bottom: 1px dashed #ccc;
     position: relative;
+    &:hover{
+      background: #fafafa;
+    }
     .title{
       font-size: 24px;
       margin-top:15px;
