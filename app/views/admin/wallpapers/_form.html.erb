@@ -1,0 +1,9 @@
+<div class="col-md-12">
+  <%= simple_form_for [:admin, @wallpaper], :html => {:class => 'form-horizontal'} do |f| %>
+    <%= f.input :name %>
+    <%= f.input :url %>
+    <%= f.input :author %>
+    <%= f.input :copyright_link %>
+    <%= f.submit %>
+  <% end %>
+</div>
