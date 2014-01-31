@@ -59,6 +59,7 @@ Maison::Application.routes.draw do
   get 'about' => 'home#about', :as => 'about'
   resources :posts, :only => ['index', 'show']
   resources :gists, :only => ['index', 'show']
+  resources :wallpapers, :only => ['index']
 
   # 后台路由
   namespace :admin do
