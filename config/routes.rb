@@ -1,4 +1,5 @@
 Maison::Application.routes.draw do
+  get "gists/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -65,6 +66,7 @@ Maison::Application.routes.draw do
   namespace :admin do
     root :to => 'home#index'
     resources :posts
+    resources :gists
     resources :categories
     resources :wallpapers
     # 用户登录与注销

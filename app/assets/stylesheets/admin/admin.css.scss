@@ -17,8 +17,8 @@ html.admin{
    border-bottom: 1px solid rgba(12, 56, 92, 0.1);
    h4{
     float: left;
-    margin: 10px 15px auto 8px;
     font-size: 20px;
+    margin-top: 20px;
    }
    p.navbar-right{
     margin-top:26px;
@@ -67,4 +67,17 @@ html.admin{
     margin-top: 20px;
   }
 
+  .inner-form{
+    margin: 20px auto;
+    .inner-one-line{
+      .form-group{
+        margin-right: 30px;
+        float: left;
+        clear: inherit;
+      }
+    }
+    .form-group{
+      clear: both;
+    }
+  }
 }

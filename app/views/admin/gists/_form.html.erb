@@ -1,0 +1,15 @@
+<div class="col-md-12">
+  <%= simple_form_for [:admin, @gist], :html => {:class => 'form-horizontal'} do |f| %>
+    <%= f.input :title%>
+    <%= f.simple_fields_for :snippets do |s| %>
+      <div class="inner-form">
+        <div class="inner-one-line">
+          <%= s.input :filename %>
+          <%= s.input :language %>
+        </div>
+        <%= s.input :code, as: 'text', input_html: { rows: 6} %>
+      </div>
+    <% end %>
+    <%= f.submit %>
+  <% end %>
+</div>

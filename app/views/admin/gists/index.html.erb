@@ -1,0 +1,20 @@
+<%= link_to '添加', new_admin_gist_path %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>序列</td>
+      <td>标题</td>
+      <td>操作</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @gists.each_with_index do |gist, i| %>
+      <tr>
+        <td><%= i+1  %></td>
+        <td><%= gist.title %></td>
+        <td><%= link_to '更新', edit_admin_gist_path(gist) %> <%= link_to '删除', admin_gist_path(gist), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @gists %>
