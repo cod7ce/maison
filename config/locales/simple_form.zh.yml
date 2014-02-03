@@ -18,15 +18,49 @@ zh:
         title: '标题'
         summary: '概要'
         category: '类别'
-        tags: '标签'
+        tag_list: '标签'
         content: '内容'
-        submit: '创建'
-    helpers:
-      submite:
-        post:
-          create: '创建'
-      defaults:
-        create: '创建'
+      category:
+        name: '名称'
+        code: '键'
+      gist:
+        title: '描述'
+        snippets:
+          filename: '文件名'
+          language: '语言'
+          code: '代码'
+      wallpaper:
+        name: '名称'
+        url: '地址'
+        author: '来源'
+        copyright_link: '版权地址'
+    placeholders:
+      post:
+        tag_list: 'ruby,rails'
+        content: '支持Markdown'
+      gist:
+        title: '支持Markdown'
+        snippets:
+          filename: 'config.rb'
+          language: 'ruby'
+      wallpaper:
+        url: 'http://'
+        author: '如：作者'
+        copyright_link: 'http://'
+  helpers:
+    submit:
+      post:
+        create: '保存文章'
+        update: '更新文章'
+      category:
+        create: '保存类别'
+        update: '更新类别'
+      gist:
+        create: '保存代码'
+        update: '更新代码'
+      wallpaper:
+        create: '保存壁纸'
+        update: '更新壁纸'
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'
