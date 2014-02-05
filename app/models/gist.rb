@@ -2,6 +2,7 @@ class Gist
   include Mongoid::Document
   include Mongoid::Timestamps
   field :title, type: String
+  field :summary, type: String
 
   belongs_to :user
   embeds_many :snippets

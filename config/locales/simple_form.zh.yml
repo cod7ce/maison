@@ -24,7 +24,8 @@ zh:
         name: '名称'
         code: '键'
       gist:
-        title: '描述'
+        title: '标题'
+        summary: '描述'
         snippets:
           filename: '文件名'
           language: '语言'
@@ -39,7 +40,7 @@ zh:
         tag_list: 'ruby,rails'
         content: '支持Markdown'
       gist:
-        title: '支持Markdown'
+        summary: '支持Markdown'
         snippets:
           filename: 'config.rb'
           language: 'ruby'

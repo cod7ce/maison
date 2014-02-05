@@ -25,7 +25,7 @@ class Admin::PostsController < Admin::ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.construire_post(params[:post])
-    if (@post.update())
+    if @post.update
       redirect_to admin_posts_path
     else
       render action: 'edit'

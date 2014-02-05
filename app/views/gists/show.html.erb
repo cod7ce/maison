@@ -1,2 +1,7 @@
-<h1>Gists#show</h1>
-<p>Find me in app/views/gists/show.html.erb</p>
+<div class="head-margin"></div>
+<h1><%= @gist.title %></h1>
+<div><%= @gist.summary %></div>
+<% @gist.snippets.each do |snippet| %>
+  <p><%= snippet.filename %></p>
+  <p><%= raw coderay(snippet) %></p>
+<% end %>

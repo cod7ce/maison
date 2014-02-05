@@ -1,6 +1,7 @@
 <div class="col-md-12">
   <%= simple_form_for [:admin, @gist], :html => {:class => 'form-horizontal'} do |f| %>
-    <%= f.input :title, as: 'text' %>
+    <%= f.input :title %>
+    <%= f.input :summary, as: 'text' %>
     <%= f.simple_fields_for :snippets do |s| %>
       <div class="inner-form">
         <div class="inner-one-line">
