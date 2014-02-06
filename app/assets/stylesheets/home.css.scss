@@ -17,6 +17,7 @@ html.front{
     -ms-transition: all ease-in-out 0.3s;
     -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
+    text-decoration: none;
   }
   body{
     background: white;
@@ -63,9 +64,8 @@ html.front{
     left: 0;
     top: 0;
     width: 100%;
-    background: hsla(240,17%,99%,0.97);
-    box-shadow: 0 0.375em 0 hsla(0,0%,0%,0.03);
-    border-bottom: 0.0625em solid #fff;
+    background: white;
+    background: rgba(255, 255, 255, 0.95);
   }
   .header-close{
     top: -$front-header-height;
@@ -84,7 +84,7 @@ html.front{
         transition: .3s;
         cursor: pointer;
         &:hover{
-          background:rgba(106, 174, 227, 0.13); 
+          border-bottom:3px solid rgba(106, 174, 227, 0.13); 
           a {
             color: #3cc7e7;
           }
@@ -158,9 +158,8 @@ html.front{
 
   .footer-wrapper{
     margin-top: 60px;
-    background: hsla(240,17%,99%,0.97);
-    box-shadow: 0 -0.375em 0 rgba(0, 0, 0, 0.03);
-    font-family: mouse;
+    background: white;
+    background: rgba(255, 255, 255, 0.95);
   }
   footer {
     padding: 40px 0;

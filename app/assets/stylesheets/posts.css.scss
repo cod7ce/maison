@@ -2,13 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html.front{
+  .pagination{
+    margin: 20px;
+    float: right;
+    a{
+      color: #454545;
+      padding: 5px;
+    }
+  }
   section{
     margin: 0px 40px;
     padding: 40px 30px 50px 100px;
     border-bottom: 1px dashed #ccc;
     position: relative;
     &:hover{
-      background: #fafafa;
+      border-bottom: 1px solid #ccc;
+    }
+    a{
+      &:hover{
+        padding-left: 10px;
+      }
     }
     .title{
       font-size: 24px;
