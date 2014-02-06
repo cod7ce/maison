@@ -1,7 +1,23 @@
 <div class="head-margin"></div>
-<h1><%= @gist.title %></h1>
-<div><%= @gist.summary %></div>
-<% @gist.snippets.each do |snippet| %>
-  <p><%= snippet.filename %></p>
-  <p><%= raw coderay(snippet) %></p>
-<% end %>
+<div class="container">
+<div class="row">
+  <article>
+    <header>
+      <h1 class="title"><%= @gist.title %></h1>
+      <div class="article-info">
+        <ul>
+          <li><span class="glyphicon glyphicon-user"></span><%= @gist.user.realname %></li>
+          <li><span class="glyphicon glyphicon-time"></span><%= @gist.created_at.strftime('%Y-%m-%d') %></li>
+        </ul>
+      </div>
+    </header>
+    <div class="article-content">
+      <div><%= @gist.summary %></div>
+      <% @gist.snippets.each do |snippet| %>
+        <p class="filename"><span class="glyphicon glyphicon-link"></span><a href="#<%= snippet.filename %>" name="<%= snippet.filename %>"><%= snippet.filename %></a></p>
+        <%= raw coderay(snippet) %>
+      <% end %>
+    </div>
+  </article>
+</div>
+</div>

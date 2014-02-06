@@ -1,6 +1,6 @@
 class Admin::GistsController < Admin::ApplicationController
   def index
-    @gists = Gist.page(params[:page])
+    @gists = Gist.where(user: current_user).page(params[:page])
   end
 
   def new
@@ -11,6 +11,7 @@ class Admin::GistsController < Admin::ApplicationController
   def create
     params.permit!
     @gist = Gist.new(params[:gist])
+    @gist.user = current_user
     @gist.save()
   end
 
@@ -20,6 +21,7 @@ class Admin::GistsController < Admin::ApplicationController
 
   def update
     @gist = Gist.find(params[:id])
+    @gist.user = current_user
     params.permit!
     if @gist.update_attributes(params[:gist])
       redirect_to admin_gists_path
