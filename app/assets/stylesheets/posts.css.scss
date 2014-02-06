@@ -83,6 +83,22 @@ html.front{
       background: #f27184;
     }
   }
+  section.gist{
+    padding-left: 160px;
+    .date{
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      height: 110px;
+      border-radius: 55px;
+    }
+    .gist-info{
+      color: #999;
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
   article{
     font-family: 'Microsoft YaHei UI','Microsoft YaHei',DengXian,SimSun,'Segoe UI',Tahoma,Helvetica,sans-serif;
     -webkit-font-feature-settings: "kern" 1;
