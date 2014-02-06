@@ -25,6 +25,9 @@ gem 'redcarpet'
 # Code highlight
 gem 'coderay'
 
+# YAML 配置信息
+gem "settingslogic", "~> 2.0.9"
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

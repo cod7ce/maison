@@ -15,6 +15,11 @@ class Post
     self.tags.try('join', ',')
   end
 
+  attr_readonly :keywords
+  def keywords
+    "#{self.tag_list},#{self.category.name},#{self.title}"
+  end
+
   belongs_to :category
   belongs_to :user
 

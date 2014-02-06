@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
 
   def about
+    set_seo_meta('简历')
   end
 end

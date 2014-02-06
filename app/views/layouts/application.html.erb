@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html class="front">
 <head>
-  <title>Maison</title>
+  <meta charset='utf-8' />
+  <%= render_page_title %>
+  <meta name="keywords" content="<%= @meta_keywords %>" />
+  <meta name="description" content="<%= @meta_description %>" />
+  <link rel="shortcut icon" href="<%= asset_path("logo.png") %>" />
+  <link rel="author" href="https://plus.google.com/112426884981573037893">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <%= yield :head_tag %>
 </head>
 <body>
   <%= render 'layouts/header'%>
