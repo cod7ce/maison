@@ -9,9 +9,11 @@
           <p class="year"><%= gist.created_at.strftime('%Y-%m') %></p>
         </div>
         <p class="title"><%= link_to gist.title, gist_path(gist) %></p>
+        <div class="gist-summary">
+          <%= raw markdown(gist.summary) %>
+        </div>
         <div class="gist-info">
-          <p>Created by <%= gist.user.realname %></p>
-          <p>Include <%= gist.snippets.size %> Snippet</p>
+          <p>包含 <%= gist.snippets.size %> Snippet   作者 <%= gist.user.realname %></p>
         </div>
         <div class="info">
           <p class="tags">24</p>

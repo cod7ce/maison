@@ -106,6 +106,7 @@ html.front{
       border-radius: 55px;
     }
     .gist-info{
+      text-align: right;
       color: #999;
       p {
         margin: 5px 0;
@@ -172,6 +173,15 @@ html.front{
         border-bottom: 0px;
         padding: 15px 10px;
         color: #333;
+        position: relative;
+        p{
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          margin: -10px 0 0 0;
+          padding: 0;
+          height: 20px;
+        }
         a {
           color: #333;
           padding-left: 5px;

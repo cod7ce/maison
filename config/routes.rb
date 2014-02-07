@@ -60,6 +60,7 @@ Maison::Application.routes.draw do
   get 'about' => 'home#about', :as => 'about'
   resources :posts, :only => ['index', 'show']
   resources :gists, :only => ['index', 'show']
+  get '/gists/:id/raw/:snippet_id/:filename', to: 'gists#raw'
   resources :wallpapers, :only => ['index']
 
   # 后台路由

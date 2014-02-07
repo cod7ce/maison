@@ -8,4 +8,10 @@ class GistsController < ApplicationController
     @gist = Gist.find(params[:id])
     set_seo_meta(@gist.title, @gist.keywords, @gist.summary)
   end
+
+  def raw
+    gist = Gist.find(params[:id])
+    snippet = gist.snippets.find(params[:snippet_id])
+    render :text => snippet.code, :content_type => Mime::TEXT
+  end
 end
