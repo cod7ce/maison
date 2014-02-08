@@ -97,19 +97,35 @@ html.front{
     }
   }
   section.gist{
-    padding-left: 160px;
-    .date{
+    padding-left: 195px;
+    border: 0;
+    padding-bottom: 0;
+    h1,h2,h3,h4,h5,h6{
+      color: #888;
+      font-weight: normal;
+    }
+    .date_wrapper{
       position: absolute;
-      top: 50px;
-      left: 20px;
+      left: 90px;
+      top: 0px;
+      bottom: 0px;
+      border-left: 4px solid #f5f5f5;
+    }
+    .date{
+      margin: 50px 0 0 -57px;
       height: 110px;
+      width: 110px;
       border-radius: 55px;
+      background: #92ee68;
+      background: rgba(146,238,104,0.8);
     }
     .gist-info{
       text-align: right;
       color: #999;
+      padding-bottom: 50px;
+      border-bottom: 1px dashed #ccc;
       p {
-        margin: 5px 0;
+        margin: 25px 0 5px;
       }
     }
   }
@@ -171,20 +187,20 @@ html.front{
         margin-bottom: -15px;
         border: 1px dashed #ccc;
         border-bottom: 0px;
-        padding: 15px 10px;
+        padding: 0 10px;
         color: #333;
         position: relative;
         p{
           position: absolute;
           right: 20px;
-          top: 50%;
-          margin: -10px 0 0 0;
+          top: 0;
+          margin: 0;
           padding: 0;
-          height: 20px;
         }
         a {
           color: #333;
           padding-left: 5px;
+          line-height: 50px;
         }
       }
     }
