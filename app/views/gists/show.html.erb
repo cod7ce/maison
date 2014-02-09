@@ -6,6 +6,12 @@
       <h1 class="title"><%= @gist.title %></h1>
       <div class="article-info">
         <ul>
+          <li>
+            <span class="glyphicon glyphicon-tags"></span>
+            <% @gist.tags.each do |tag| %>
+              <%= link_to tag,posts_path %>
+            <% end %>
+          </li>
           <li><span class="glyphicon glyphicon-user"></span><%= @gist.user.realname %></li>
           <li><span class="glyphicon glyphicon-time"></span><%= @gist.created_at.strftime('%Y-%m-%d') %></li>
         </ul>
