@@ -10,7 +10,7 @@
             <p class="year"><%= gist.created_at.strftime('%Y-%m') %></p>
           </div>
         </div>
-        <p class="title"><%= link_to gist.title, gist_path(gist) %></p>
+        <p class="title"><%= link_to gist.title, seo_friendly_path(gist) %></p>
         <div class="gist-summary">
           <%= raw markdown(gist.summary) %>
         </div>

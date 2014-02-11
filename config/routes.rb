@@ -1,5 +1,4 @@
 Maison::Application.routes.draw do
-  get "gists/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -60,7 +59,12 @@ Maison::Application.routes.draw do
   get 'about' => 'home#about', :as => 'about'
   resources :posts, :only => ['index', 'show']
   resources :gists, :only => ['index', 'show']
+  
+  # Gist 前台路由
+  get '/gists/:user/:aliase(.:format)', to: 'gists#show'
   get '/gists/:id/raw/:snippet_id/:filename', to: 'gists#raw'
+
+  # 壁纸API
   resources :wallpapers, :only => ['index']
 
   # 后台路由

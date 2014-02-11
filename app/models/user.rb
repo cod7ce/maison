@@ -19,6 +19,7 @@ class User
   before_create :encrypt_password 
 
   has_many :posts
+  has_many :gists
   
   def auth?
     if @auth_user ||= User.where(:email => self.email ).first

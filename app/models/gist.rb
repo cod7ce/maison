@@ -3,6 +3,7 @@ class Gist
   include Mongoid::Timestamps
   field :title, type: String
   field :summary, type: String
+  field :aliase, type: String
   field :tags, type: Array
 
   attr_accessor :tag_list
