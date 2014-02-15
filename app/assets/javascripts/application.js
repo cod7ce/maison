@@ -17,3 +17,4 @@
 //= require bootstrap
 //= require jquery.ui.all
 //= require jquery.fullPage
+//= require jquery_nested_form

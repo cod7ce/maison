@@ -44,6 +44,7 @@ gem 'kaminari'
 
 gem "bootstrap-sass", '~> 3.0.3.0'
 gem "simple_form"
+gem "nested_form"
 
 gem "will_paginate"
 
@@ -57,4 +58,4 @@ gem "will_paginate"
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]

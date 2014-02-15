@@ -29,4 +29,9 @@ class Admin::GistsController < Admin::ApplicationController
       render action: 'edit'
     end
   end
+
+  def destroy
+    Gist.find(params[:id]).delete()
+    redirect_to admin_gists_path
+  end
 end

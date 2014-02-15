@@ -33,7 +33,7 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def destroy 
-    @post = Post.find(params[:id]).delete()
+    Post.find(params[:id]).delete()
     redirect_to admin_posts_path
   end
 end

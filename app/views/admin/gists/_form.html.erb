@@ -1,5 +1,5 @@
 <div class="col-md-12">
-  <%= simple_form_for [:admin, @gist], :html => {:class => 'form-horizontal'} do |f| %>
+  <%= simple_nested_form_for [:admin, @gist], :html => {:class => 'form-horizontal'} do |f| %>
     <%= f.input :title %>
     <%= f.input :alias %>
     <%= f.input :tag_list %>
@@ -11,8 +11,10 @@
           <%= s.input :language %>
         </div>
         <%= s.input :code, as: 'text', input_html: { rows: 6} %>
+        <div class="snippet-remove"><%= s.link_to_remove "删除代码片段" %></div>
       </div>
     <% end %>
+    <div class="snippet-create"><%= f.link_to_add "添加代码片段", :snippets %></div>
     <%= f.submit %>
   <% end %>
 </div>

@@ -22,5 +22,5 @@ class Gist
 
   belongs_to :user
   embeds_many :snippets
-  accepts_nested_attributes_for :snippets
+  accepts_nested_attributes_for :snippets, reject_if: lambda { |s| s[:filename].blank? }, allow_destroy: true
 end
