@@ -5,7 +5,8 @@ class GistsController < ApplicationController
   end
 
   def show
-    @gist = Gist.where(:user_id.in => User.where(name: params[:user]).distinct(:_id), :alias => params[:alias]).first
+    #@gist = Gist.where(:user_id.in => User.where(name: params[:user]).distinct(:_id), :alias => params[:alias]).first
+    @gist = Gist.where(:user_id => User.where(name: params[:user]).first.id, :alias => params[:alias]).first
     set_seo_meta(@gist.title, @gist.keywords, @gist.summary)
   end
 

@@ -3,7 +3,7 @@
     <%= f.input :title %>
     <%= f.input :alias %>
     <%= f.input :summary, as: :text %>
-    <%= f.input :category, collection: Category.all, include_blank: false %>
+    <%= f.input :category_id, collection: Category.all, include_blank: false %>
     <%= f.input :tag_list %>
     <%= f.input :content, as: :text, input_html: { rows: 15} %>
     <%= f.submit %>
