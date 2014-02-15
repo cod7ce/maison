@@ -30,6 +30,6 @@ class Post
     self.title = params[:title]
     self.summary = params[:summary]
     self.content = params[:content]
-    self.category = Category.find(params[:category])
+    self.category = Category.find(params[:category_id])
   end
 end
