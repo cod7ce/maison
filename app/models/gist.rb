@@ -3,8 +3,8 @@ class Gist
   include Mongoid::Timestamps
   field :title, type: String
   field :summary, type: String
-  field :aliase, type: String
   field :tags, type: Array
+  field :alias, type: String
 
   attr_accessor :tag_list
   def tag_list=(value)

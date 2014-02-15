@@ -7,7 +7,7 @@
           <p class="day"><%= post.created_at.day %></p>
           <p class="year"><%= post.created_at.strftime('%Y-%m') %></p>
         </div>
-        <p class="title"><%= link_to post.title, post_path(post) %></p>
+        <p class="title"><%= link_to post.title, seo_friendly_path(post) %></p>
         <p class="summary"><%= post.summary %>
         <div class="info">
           <p class="tags">24</p>

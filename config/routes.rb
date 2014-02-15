@@ -61,9 +61,11 @@ Maison::Application.routes.draw do
   resources :gists, :only => ['index', 'show']
   
   # Gist 前台路由
-  get '/gists/:user/:aliase(.:format)', to: 'gists#show'
+  get '/gists/:user/:alias(.:format)', to: 'gists#show'
   get '/gists/:id/raw/:snippet_id/:filename', to: 'gists#raw'
 
+  # Post 前台路由
+  get '/posts/:user/:alias(.:format)', to: 'posts#show'
   # 壁纸API
   resources :wallpapers, :only => ['index']
 

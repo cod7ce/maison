@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def seo_friendly_path obj
-    obj_mark = obj.aliase ? obj.aliase : obj.id
+    obj_mark = obj.alias ? obj.alias : obj.id
     "#{obj.class.to_s.downcase.pluralize}/#{obj.user.name}/#{obj_mark}"
   end
 end

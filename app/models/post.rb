@@ -5,6 +5,7 @@ class Post
   field :summary, type: String
   field :content, type: String
   field :tags, type: Array
+  field :alias, type: String
 
   attr_accessor :tag_list
   def tag_list=(value)
@@ -25,6 +26,7 @@ class Post
 
   def construire_post(params)
     self.tag_list = params[:tag_list]
+    self.alias = params[:alias]
     self.title = params[:title]
     self.summary = params[:summary]
     self.content = params[:content]

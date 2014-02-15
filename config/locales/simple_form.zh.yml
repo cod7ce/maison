@@ -16,6 +16,7 @@ zh:
         password: '密码'
       post:
         title: '标题'
+        alias: '别名'
         summary: '概要'
         category: '类别'
         tag_list: '标签'
@@ -25,6 +26,7 @@ zh:
         code: '键'
       gist:
         title: '标题'
+        alias: '别名'
         tag_list: '标签'
         summary: '描述'
         snippets:
