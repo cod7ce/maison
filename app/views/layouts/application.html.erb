@@ -12,8 +12,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/header'%>
+  <%= render 'layouts/header' unless params[:controller] == 'home' && params[:action] == 'index' %>
   <%= yield %>
-  <%= render 'layouts/footer' %>
+  <%= render 'layouts/footer' unless params[:controller] == 'home' && params[:action] == 'index' %>
 </body>
 </html>

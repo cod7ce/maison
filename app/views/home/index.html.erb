@@ -1,55 +1,64 @@
-<div class="head-margin"></div>
-<!-- zhifangzi start -->
-<div class="my-words">
-  <div>Maison</div>
-  <p>&lt;%= dingnAn.lift! %&gt;</p>
+<div id="home-menu">
+  <%= render "layouts/menu" %>
 </div>
-<div id="zhifangzi">
-  <div class="container">
-    <div class="row">
-      <div class="jumbotron text-center">
-        <h1>纸房子</h1>
-        <!--<p>快乐{源于}分享</p>-->
-        <p>用文章表达态度，用代码传递思想，极简风格的程序员主站</p>
-        <p><a href="https://github.com/cod7ce/maison" target="_blank" class="btn btn-default btn-lg btn-github" role="button">快去Github看看&nbsp;; )</a></p>
+<!-- zhifangzi start -->
+<div class="my-words section">
+  <div class="mouse">Maison</div>
+  <div id="zhifangzi">
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron text-center">
+          <h1>纸房子</h1>
+          <!--<p>快乐{源于}分享</p>-->
+          <p>用文章表达态度，用代码传递思想，极简风格的程序员主站</p>
+          <p><a href="https://github.com/cod7ce/maison" target="_blank" class="btn btn-default btn-lg btn-github" role="button">Github</a></p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <!-- zhifangzi end -->
 <!-- daily wall start -->
-<div class="daily-wall text-center">
+<div class="daily-wall text-center section">
   <span class="glyphicon glyphicon-picture"></span>
-  <h1>Daily Wall</h1>
-</div>
-<div class="container text-center">
-  <div class="row">
-    <div class="jumbotron">
-    <h1>每日壁纸</h1>
-    <p>Mac平台壁纸控的利器，每天更换您的桌面壁纸</p>
-    <p>
-      <%= link_to 'Download', 'http://github.com', :class => 'btn btn-default btn-lg btn-github' %>
-      <%= link_to 'Github', 'https://github.com/cod7ce/PaperHouseLite', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
-    </p>
+  <h2>Daily Wall</h2>
+  <div class="container text-center">
+    <div class="row">
+      <div class="jumbotron">
+      <h1>每日壁纸</h1>
+      <p>Mac平台壁纸控的利器，每天更换您的桌面壁纸</p>
+      <p>
+        <%= link_to 'Download', 'http://github.com', :class => 'btn btn-default btn-lg btn-github' %>
+        <%= link_to 'Github', 'https://github.com/cod7ce/PaperHouseLite', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
+      </p>
+      </div>
     </div>
   </div>
 </div>
 <!-- daily wall end -->
 <!-- analog clock start -->
-<div class="analog-clock text-center">
+<div class="analog-clock text-center section">
   <span class="glyphicon glyphicon-time"></span>
-  <h1>Analog Clock</h1>
-</div>
-<div class="container text-center">
-  <div class="row">
-    <div class="jumbotron">
-      <h1>模拟时钟</h1>
-      <p>一款精致的Mac端模拟时钟屏保, 外加背景图片的Ken Burns轮换</p>
-      <p>
-        <%= link_to 'Download', 'http://pan.baidu.com/share/link?shareid=630291&uk=1562291124', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
-        <%= link_to 'Github', 'https://github.com/cod7ce/AnalogClock', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
-      </p>
+  <h2>Analog Clock</h2>
+  <div class="container text-center">
+    <div class="row">
+      <div class="jumbotron">
+        <h1>模拟时钟</h1>
+        <p>一款精致的Mac端模拟时钟屏保, 外加背景图片的Ken Burns轮换</p>
+        <p>
+          <%= link_to 'Download', 'http://pan.baidu.com/share/link?shareid=630291&uk=1562291124', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
+          <%= link_to 'Github', 'https://github.com/cod7ce/AnalogClock', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
+        </p>
+      </div>
     </div>
   </div>
 </div>
 <!-- analog clock start -->
+<script> 
+    $.fn.fullpage({
+      loopHorizontal: false,
+      scrollingSpeed: 750,
+      paddingBottom: '30px',
+      navigation: true
+    }); 
+</script>

@@ -28,12 +28,17 @@ html.front{
   .text-center{
     text-align: center;
   }
+  .mouse{
+    font-family: mouse;
+  }
   .btn-github{
+    letter-spacing: 0;
+    text-transform: initial;
     width: 40%;
-    background: none;
-    border: 2px solid #e7eaf1;
+    background: rgba(255,255,255,.2);
+    border: 0;
     padding: 18px 50px;
-    color: #b1bad0;
+    color: #fff;
     margin-top: 20px;
     border-radius: 3px;
     -webkit-transition: all .3s;
@@ -42,8 +47,7 @@ html.front{
     -o-transition: all .3s;
     transition: all .3s;
     &:hover{
-      color: #7e8aa7;
-      border-color: #e0e3ec;
+      background: rgba(255,255,255,.4);
     }
   }
   .section{
@@ -69,6 +73,31 @@ html.front{
   }
   .header-close{
     top: -$front-header-height;
+  }
+  #home-menu{
+    z-index: 1000;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    ul{
+      li{
+        float: left;
+        list-style: none;
+        text-align: center;
+        width: 80px;
+        height: 50px;
+        line-height: 50px;
+        &:hover{
+          background: rgba(255, 255, 255, 0.4)
+        }
+        a{
+          color: #fff;
+          font-size: 12px;
+        }
+      }
+    }
   }
   header{
     height: $front-header-height;
@@ -102,23 +131,24 @@ html.front{
     }
   }
     .jumbotron{
-      background: white;
+      background: none;
+      padding-top: 0;
+      padding-bottom: 0;
       h1,h2{
-        color: #737c93;
+        color: #fff;
         margin-bottom: 30px;
         letter-spacing: 0.2em;
         font-weight: 200;
       }
       p{
         color: #989faf;
+        color: rgba(0,0,0,.3);
       }
     }
   .my-words{
-    background: #6aaee3;
-    padding: 120px 50px;
+    background: #64bced;
     text-align: center;
     color: white;
-    font-family: mouse;
     font-size: 150px;
     letter-spacing: 0.15em;
     p{
@@ -126,7 +156,6 @@ html.front{
       font-size: 26px;
     }
   }
-
   #zhifangzi{
     div{
       position: relative;
@@ -139,11 +168,10 @@ html.front{
     }
   }
   .daily-wall, .analog-clock{
-    background: #a06ae3;
+    background: #e9c75c; /* #a06ae3;*/
     letter-spacing: 0.5em;
     text-transform: uppercase;
     color: white;
-    padding: 100px 50px;
     h1{
       margin-top: 50px;
       font-size: 30px;
@@ -153,16 +181,15 @@ html.front{
     }
   }
   .analog-clock{
-    background: #f27184;
+    background: #a06ae3; /*#f27184;*/
   }
 
   .footer-wrapper{
-    margin-top: 60px;
     background: white;
     background: rgba(255, 255, 255, 0.95);
   }
   footer {
-    padding: 40px 0;
+    padding: 50px 0;
     a {
       text-transform: uppercase;
       display: inline-block;
