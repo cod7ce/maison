@@ -11,6 +11,7 @@
           <h1>纸房子</h1>
           <!--<p>快乐{源于}分享</p>-->
           <p>用文章表达态度，用代码传递思想，极简风格的程序员主站</p>
+          <p>采用Ruby On Rails构建</p>
           <p><a href="https://github.com/cod7ce/maison" target="_blank" class="btn btn-default btn-lg btn-github" role="button">Github</a></p>
         </div>
       </div>
@@ -28,7 +29,7 @@
       <h1>每日壁纸</h1>
       <p>Mac平台壁纸控的利器，每天更换您的桌面壁纸</p>
       <p>
-        <%= link_to 'Download', 'http://github.com', :class => 'btn btn-default btn-lg btn-github' %>
+        <%= link_to 'Download Soon...', '#', :class => 'btn btn-default btn-lg btn-github' %>
         <%= link_to 'Github', 'https://github.com/cod7ce/PaperHouseLite', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
       </p>
       </div>
@@ -57,7 +58,8 @@
 <script> 
     $.fn.fullpage({
       loopHorizontal: false,
-      scrollingSpeed: 750,
+      easing: 'easeInOutQuart',
+      scrollingSpeed: 1500,
       paddingBottom: '30px',
       navigation: true
     }); 
