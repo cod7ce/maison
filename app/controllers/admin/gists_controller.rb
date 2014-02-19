@@ -12,7 +12,11 @@ class Admin::GistsController < Admin::ApplicationController
     params.permit!
     @gist = Gist.new(params[:gist])
     @gist.user = current_user
-    @gist.save()
+    if @gist.save()
+      redirect_to admin_gists_path
+    else
+      render action: 'new'
+    end
   end
 
   def edit
