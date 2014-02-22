@@ -14,6 +14,11 @@ class User
   field :homepage, type: String
   field :bio, type: String
 
+  default_scope desc(:created_at)
+
+  validates_presence_of :name, :email
+  validates_uniqueness_of :email
+
   attr_accessor :password
 
   before_create :encrypt_password 

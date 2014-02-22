@@ -3,7 +3,7 @@
     <%= f.input :title %>
     <%= f.input :alias %>
     <%= f.input :tag_list %>
-    <%= f.input :summary, as: 'text' %>
+    <%= f.input :summary, as: 'text', input_html: {rows: 8} %>
     <%= f.simple_fields_for :snippets do |s| %>
       <div class="inner-form">
         <div class="inner-one-line">

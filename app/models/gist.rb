@@ -6,6 +6,11 @@ class Gist
   field :tags, type: Array
   field :alias, type: String
 
+  default_scope desc(:created_at)
+
+  validates_presence_of :title, :alias
+  validates_uniqueness_of :alias
+
   attr_accessor :tag_list
   def tag_list=(value)
     self.tags = value.split(',') if !value.blank?

@@ -30,3 +30,41 @@ zh:
       previous: "&lsaquo; 上一页"
       next: "下一页 &rsaquo;"
       truncate: "..."
+  mongoid:
+    errors:
+      models:
+        wallpaper:
+          attributes:
+            url:
+              blank: '请填写URL'
+              taken: 'URL不可重复'
+        category:
+          attributes:
+            name:
+              blank: '请填写类别名称'
+            code:
+              blank: '请填写code值'
+              taken: 'code值不可重复'
+        gist:
+          attributes:
+            title:
+              blank: '少年，标题要写啊'
+            alias:
+              blank: '别名很重要，一定得写啊'
+              taken: '别名不能重复'
+        post:
+          attributes:
+            title:
+              blank: '少年，标题要写啊'
+            content:
+              blank: '啥也不写就不要发布了'
+            alias:
+              blank: '别名很重要，一定得写啊'
+              taken: '别名不能重复'
+        user:
+          attributes:
+            name:
+              blank: '用户名还是得要的'
+            email:
+              blank: '请填写邮箱'
+              taken: '该邮箱已被使用过'

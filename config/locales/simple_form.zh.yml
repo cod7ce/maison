@@ -40,9 +40,11 @@ zh:
         copyright_link: '版权地址'
     placeholders:
       post:
+        alias: '与文章url优化有关，如：how_to_study_rails'
         tag_list: 'ruby,rails'
         content: '支持Markdown'
       gist:
+        alias: '与代码url优化有关，如：split_string_by_comma'
         tag_list: 'tag1,tag2'
         summary: '支持Markdown'
         snippets:
@@ -70,4 +72,3 @@ zh:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
-
