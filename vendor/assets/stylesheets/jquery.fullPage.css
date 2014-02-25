@@ -41,12 +41,12 @@ html, body {
 }
 .tableCell {
     display: table-cell;
-    vertical-align: bottom;
+    vertical-align: middle;
     width: 100%;
     height: 100%;
 }
-.my-words .tableCell {
-    vertical-align: middle;
+.analog-clock .tableCell, .daily-wall .tableCell {
+    vertical-align: bottom;
 }
 .slidesContainer {
     float: left;
