@@ -69,4 +69,4 @@ gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 gem 'debugger', group: [:development, :test]
 
 # Use unicorn as the app server
-gem 'unicorn'
+gem 'puma'

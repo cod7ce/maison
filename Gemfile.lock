@@ -110,6 +110,8 @@ GEM
     nested_form (0.3.2)
     origin (1.1.0)
     polyglot (0.3.3)
+    puma (2.7.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -185,6 +187,7 @@ DEPENDENCIES
   mongoid!
   mongoid-grid_fs!
   nested_form
+  puma
   rails (= 4.0.2)
   redcarpet
   sass-rails (~> 4.0.0)
