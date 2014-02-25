@@ -10,7 +10,7 @@ class Admin::WallpapersController < Admin::ApplicationController
   def create
     @wallpaper = Wallpaper.new
     @wallpaper.name = params[:wallpaper][:name]
-    @wallpaper.url = params[:wallpaper][:url]
+    @wallpaper.picture = params[:wallpaper][:picture]
     @wallpaper.author = params[:wallpaper][:author]
     @wallpaper.copyright_link = params[:wallpaper][:copyright_link]
     if @wallpaper.save
@@ -27,7 +27,7 @@ class Admin::WallpapersController < Admin::ApplicationController
   def update
     @wallpaper = Wallpaper.find(params[:id])
     @wallpaper.name = params[:wallpaper][:name]
-    @wallpaper.url = params[:wallpaper][:url]
+    @wallpaper.picture = params[:wallpaper][:picture] if params[:wallpaper][:picture]
     @wallpaper.author = params[:wallpaper][:author]
     @wallpaper.copyright_link = params[:wallpaper][:copyright_link]
     if @wallpaper.update

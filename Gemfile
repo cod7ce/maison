@@ -25,6 +25,8 @@ gem 'redcarpet'
 # Code highlight
 gem 'coderay'
 
+
+
 # YAML 配置信息
 gem "settingslogic", "~> 2.0.9"
 
@@ -47,6 +49,12 @@ gem "simple_form"
 gem "nested_form"
 
 gem "will_paginate"
+
+# uploads
+gem 'mini_magick', :git => 'git://github.com/probablycorey/mini_magick.git'
+gem 'carrierwave'
+gem "carrierwave-mongoid", git: "git://github.com/jnicklas/carrierwave-mongoid.git"
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

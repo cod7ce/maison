@@ -27,11 +27,19 @@
     <div class="row">
       <div class="jumbotron">
       <h1>每日壁纸</h1>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 560px;">
+          <div class="modal-content">
+            <%= image_tag asset_path 'dailywallpaper.png' %>
+          </div>
+        </div>
+      </div>
       <p>Mac平台壁纸控的利器，每天更换您的桌面壁纸</p>
       <p>
         <%= link_to 'Download Soon...', '#', :class => 'btn btn-default btn-lg btn-github' %>
         <%= link_to 'Code on Github', 'https://github.com/cod7ce/PaperHouseLite', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
       </p>
+      <button class="btn btn-preview" data-toggle="modal" data-target="#myModal">预览图</button>
       </div>
     </div>
   </div>
@@ -45,11 +53,19 @@
     <div class="row">
       <div class="jumbotron">
         <h1>模拟时钟</h1>
+        <div class="modal fade" id="analogclockModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" style="width: 900px;">
+            <div class="modal-content">
+              <%= image_tag (asset_path 'analogclock.png'), size: '900x560' %>
+            </div>
+          </div>
+        </div>
         <p>一款精致的Mac端模拟时钟屏保, 外加背景图片的Ken Burns轮换</p>
         <p>
           <%= link_to 'Download', 'http://pan.baidu.com/share/link?shareid=630291&uk=1562291124', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
           <%= link_to 'Code on Github', 'https://github.com/cod7ce/AnalogClock', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
         </p>
+        <button class="btn btn-preview" data-toggle="modal" data-target="#analogclockModal">预览图</button>
       </div>
     </div>
   </div>

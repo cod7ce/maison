@@ -31,6 +31,19 @@ html.front{
   .mouse{
     font-family: mouse;
   }
+  .btn-preview{
+    letter-spacing: 0;
+    background: rgba(0,0,0,0.0);
+    margin: 0;
+    margin-top:50px;
+    color: #989faf;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .modal{
+    .modal-dialog, img, .modal-content{
+      border-radius: 3px;
+    }
+  }
   .btn-github{
     letter-spacing: 0;
     text-transform: initial;
