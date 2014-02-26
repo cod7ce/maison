@@ -159,14 +159,27 @@ html.front{
       }
     }
   .my-words{
-    background: #64bced;
+    background: url('/assets/kong.jpg') top center  #64bced;
     text-align: center;
     color: white;
     font-size: 150px;
     letter-spacing: 0.15em;
+    div.author{
+      position: absolute;
+      bottom: 40px;
+      right: 20px;
+      a{
+        font-size: 12px;
+        display: inherit;
+        letter-spacing: 0;
+        color: rgba(255,255,255,0.7);
+      }
+    }
     p{
       letter-spacing: 0.15em;
       font-size: 26px;
+      text-shadow: 0 0 50px #fff;
+      color: rgba(0, 0, 0, 0.5);
     }
   }
   #zhifangzi{
