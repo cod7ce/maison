@@ -68,8 +68,8 @@ Maison::Application.routes.draw do
   get '/posts/:user/:alias(.:format)', to: 'posts#show'
   # 壁纸API
   resources :wallpapers, :only => ['index']
-  get '/uploads/wallpaper/:id/:filename' => 'wallpapers#thumb_picture', constraints: { filename: /thumb.*/ }
-  get '/uploads/wallpaper/:id/:filename' => 'wallpapers#picture'
+  # get '/uploads/wallpaper/:id/:filename' => 'wallpapers#thumb_picture', constraints: { filename: /thumb.*/ }
+  # get '/uploads/wallpaper/:id/:filename' => 'wallpapers#picture'
 
   # 后台路由
   namespace :admin do
