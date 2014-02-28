@@ -80,7 +80,7 @@
           <h2>LightBox</h2>
           <p>一款样式轻盈、使用方便、配置简单的轻量级jquery弹出框插件</p>
           <%= link_to 'Code on Github', 'https://github.com/cod7ce/AnalogClock', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
-          <%= link_to '在线预览', 'http://jsfiddle.net/cod7ce/n9xH4/4/embedded/result/', :class => 'btn btn-preview', target: '_blank'%>
+          <%= link_to '在线预览', 'http://jsfiddle.net/cod7ce/n9xH4/embedded/result/', :class => 'btn btn-preview', target: '_blank'%>
         </div>
       </div>
       <div class="col-md-6">
@@ -94,18 +94,14 @@
   </div>
 </div>
 <script> 
-    $.fn.fullpage({
-      loopHorizontal: false,
-      easing: 'easeInOutQuart',
-      scrollingSpeed: 1500,
-      paddingBottom: '30px',
-      navigation: true,
-      afterRender: function(){
-        $('#maison, #maison-github, .jumbotron p').addClass('active');
-      },
-      afterLoad: function(anchorLink, index){
-        if(index == 0){
-        }
-      }
-    }); 
+  $.fn.fullpage({
+    loopHorizontal: false,
+    easing: 'easeInOutQuart',
+    scrollingSpeed: 1500,
+    paddingBottom: '30px',
+    navigation: true
+  }); 
+  $(document).on('ready page:load', function(){
+     $('#maison, #maison-github, .jumbotron p').addClass('active'); 
+  });
 </script>
