@@ -1,0 +1,52 @@
+/*圆角*/
+@mixin border_radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+                              
+/*3D变换*/
+@mixin transform3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -moz-transform: translate3d($x, $y, $z);
+  -ms-transform: translate3d($x, $y, $z);
+  -o-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+
+/*所有css属性添加过度动画*/
+@mixin transition_all($d) {
+  -webkit-transition: all ease-in-out $d;
+  -moz-transition: all ease-in-out $d;
+  -ms-transition: all ease-in-out $d;
+  -o-transition: all ease-in-out $d;
+  transition: all ease-in-out $d;
+}
+
+/*动画延时*/
+@mixin animation_delay($s) {
+  -webkit-animation-delay: $s;
+  -moz-animation-delay: $s;
+  -ms-animation-delay: $s;
+  -o-animation-delay: $s;
+  animation-delay: $s;
+}
+
+/*变形延时*/
+@mixin transition_delay ($s) { 
+  -webkit-transition-delay: $s;
+  -moz-transition-delay: $s;
+  -ms-transition-delay: $s;
+  -o-transition-delay: $s;
+  transition-delay: $s;
+}
+
+/*透明*/
+@mixin transparent($o) {
+  filter:alpha(opacity=$o*100);
+  -moz-opacity:$o;
+  -khtml-opacity: $o;
+  opacity: $o;
+}

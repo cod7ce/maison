@@ -1,6 +1,7 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'mixin';
 html.front{
   .pagination{
     margin: 20px;
@@ -115,7 +116,7 @@ html.front{
       margin: 50px 0 0 -57px;
       height: 110px;
       width: 110px;
-      border-radius: 55px;
+      @include border_radius(55px);
       background: #92ee68;
       background: rgba(146,238,104,0.8);
     }

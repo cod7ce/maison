@@ -1,10 +1,7 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@font-face{
-  font-family: mouse;
-  src: url('/assets/Mouse.otf');
-}
+@import 'mixin';
 $front-header-height: 100px;
 html.front{
   body, ul, li {
@@ -12,11 +9,7 @@ html.front{
     padding: 0;
   }
   a, .header-wrapper{
-    -webkit-transition: all ease-in-out 0.3s;
-    -moz-transition: all ease-in-out 0.3s;
-    -ms-transition: all ease-in-out 0.3s;
-    -o-transition: all ease-in-out 0.3s;
-    transition: all ease-in-out 0.3s;
+    @include transition_all(0.3s);
     text-decoration: none;
   }
   body{
@@ -41,7 +34,6 @@ html.front{
   }
   .modal{
     .modal-dialog, img, .modal-content{
-      border-radius: 3px;
     }
   }
   .btn-github{
@@ -53,12 +45,8 @@ html.front{
     padding: 18px 50px;
     color: #fff;
     margin-top: 20px;
-    border-radius: 3px;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    @include border_radius(3px);
+    @include transition_all(0.3s);
     &:hover{
       background: rgba(255,255,255,.4);
     }
@@ -92,7 +80,7 @@ html.front{
     position: fixed;
     top: 20px;
     left: 20px;
-    border-radius: 3px;
+    @include border_radius(3px);
     background: rgba(255, 255, 255, 0.2);
     ul{
       li{
@@ -122,8 +110,7 @@ html.front{
         height: $front-header-height;
         line-height: $front-header-height;
         text-align: center;
-        -webkit-transition: .3s;
-        transition: .3s;
+        @include transition_all(0.3s);
         cursor: pointer;
         &:hover{
           border-bottom:3px solid rgba(106, 174, 227, 0.13); 
@@ -132,8 +119,7 @@ html.front{
           }
         }
         a {
-          -webkit-transition: .3s;
-          transition: .3s;
+          @include transition_all(0.3s);
           display: block;
           height: 100%;
           color: #99A0B0;
@@ -159,11 +145,41 @@ html.front{
       }
     }
   .my-words{
-    background: url('/assets/kong.jpg') top center  #64bced;
+    background: image-url('kong.jpg') top center  #64bced;
     text-align: center;
     color: white;
     font-size: 150px;
     letter-spacing: 0.15em;
+    #maison{
+      @include transparent(0.0); 
+      @include transform3d(0, -300px, 0);
+      @include transition_all(1s);
+      @include transition_delay(2s);
+    }
+    #maison.active{
+      @include transparent(1); 
+      @include transform3d(0, 0, 0);
+    }
+    #maison-github{
+      @include transform3d(0, 200px, 0);
+      @include transition_all(1s);
+      @include transition_delay(3s);
+    }
+    #maison-github.active{
+      @include transform3d(0, 0, 0);
+    }
+    p{
+      letter-spacing: 0.15em;
+      font-size: 26px;
+      text-shadow: 0 0 50px #fff;
+      color: rgba(0, 0, 0, 0.5);
+      @include transparent(0);
+      @include transition_all(1s);
+      @include transition_delay(1s);
+    }
+    p.active{
+      @include transparent(1);
+    }
     div.author{
       position: absolute;
       bottom: 40px;
@@ -172,14 +188,11 @@ html.front{
         font-size: 12px;
         display: inherit;
         letter-spacing: 0;
-        color: rgba(255,255,255,0.7);
+        color: rgba(255,255,255,0.3);
+        &:hover{
+          color: rgba(255,255,255,0.9);
+        }
       }
-    }
-    p{
-      letter-spacing: 0.15em;
-      font-size: 26px;
-      text-shadow: 0 0 50px #fff;
-      color: rgba(0, 0, 0, 0.5);
     }
   }
   #zhifangzi{
@@ -193,7 +206,7 @@ html.front{
       }
     }
   }
-  .daily-wall, .analog-clock{
+  .daily-wall, .analog-clock, .my-apps{
     background: #e9c75c; /* #a06ae3;*/
     letter-spacing: 0.5em;
     text-transform: uppercase;
@@ -208,6 +221,12 @@ html.front{
   }
   .analog-clock{
     background: #a06ae3; /*#f27184;*/
+  }
+  .my-apps{
+    background: #f27184;
+    .btn-github {
+      width: 100%;
+    }
   }
 
   .footer-wrapper{

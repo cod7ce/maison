@@ -4,16 +4,16 @@
 <!-- zhifangzi start -->
 <div class="my-words section">
   <div class="author"><%= link_to '背景来源:KONG', 'http://kongraphy.lofter.com/post/f1fc0_b731b3', :target => '_blank' %></div>
-  <div class="mouse">Maison</div>
+  <div class="mouse" id="maison">Maison</div>
   <div id="zhifangzi">
     <div class="container">
       <div class="row">
         <div class="jumbotron text-center">
           <h1>纸房子</h1>
           <!--<p>快乐{源于}分享</p>-->
-          <p>用文章表达态度，用代码传递思想，极简风格的程序员主站</p>
+          <p>用文章表达态度，用代码传递思想，极简风格程序员主站</p>
           <p>采用Ruby On Rails构建</p>
-          <p><%= link_to 'Code on Github', 'https://github.com/cod7ce/maison', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %></p>
+          <p id="maison-github"><%= link_to 'Code on Github', 'https://github.com/cod7ce/maison', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %></p>
         </div>
       </div>
     </div>
@@ -72,12 +72,40 @@
   </div>
 </div>
 <!-- analog clock start -->
+<div class="my-apps text-center section">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <h2>LightBox</h2>
+          <p>一款样式轻盈、使用方便、配置简单的轻量级jquery弹出框插件</p>
+          <%= link_to 'Code on Github', 'https://github.com/cod7ce/AnalogClock', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
+          <%= link_to '在线预览', 'http://jsfiddle.net/cod7ce/n9xH4/4/embedded/result/', :class => 'btn btn-preview', target: '_blank'%>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <h2>SIFIC 2014</h2>
+          <p>SIFIC 2014大会ios客户端，为商业软件，已上传App Store</p>
+          <%= link_to 'App Store', 'https://itunes.apple.com/us/app/sific-2014/id789337584?mt=8', :class => 'btn btn-default btn-lg btn-github', target: '_blank' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script> 
     $.fn.fullpage({
       loopHorizontal: false,
       easing: 'easeInOutQuart',
       scrollingSpeed: 1500,
       paddingBottom: '30px',
-      navigation: true
+      navigation: true,
+      afterRender: function(){
+        $('#maison, #maison-github, .jumbotron p').addClass('active');
+      },
+      afterLoad: function(anchorLink, index){
+        if(index == 0){
+        }
+      }
     }); 
 </script>

@@ -12,3 +12,7 @@
  *= require_tree .
  *= require jquery.fullPage
  */
+@font-face{
+  font-family: mouse;
+  src: url('/assets/Mouse.otf');
+}
