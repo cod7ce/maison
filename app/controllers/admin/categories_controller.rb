@@ -1,4 +1,6 @@
 class Admin::CategoriesController < Admin::ApplicationController
+  before_filter :find_category, :only => [:edit, :update, :destroy]
+  
   def index
     @categories = Category.page(params[:page])
   end
@@ -8,9 +10,7 @@ class Admin::CategoriesController < Admin::ApplicationController
   end
 
   def create
-    @category = Category.new
-    @category.code = params[:category][:code]
-    @category.name = params[:category][:name]
+    @category = Category.new(category_params)
     if @category.save
       redirect_to admin_categories_path
     else
@@ -19,14 +19,10 @@ class Admin::CategoriesController < Admin::ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:id])
-    @category.code = params[:category][:code]
-    @category.name = params[:category][:name]
-    if @category.update
+    if @category.update_attributes(category_params)
       redirect_to admin_categories_path
     else
       render :action => 'edit'
@@ -35,8 +31,16 @@ class Admin::CategoriesController < Admin::ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
     @category.delete
     redirect_to admin_categories_path
+  end
+
+  private
+  def category_params
+    params.require(:category).permit(:code, :name)
+  end
+
+  def find_category
+    @category = Category.find(params[:id])
   end
 end

@@ -28,13 +28,4 @@ class Post
 
   belongs_to :category
   belongs_to :user
-
-  def construire_post(params)
-    self.tag_list = params[:tag_list]
-    self.alias = params[:alias]
-    self.title = params[:title]
-    self.summary = params[:summary]
-    self.content = params[:content]
-    self.category = Category.find(params[:category_id])
-  end
 end

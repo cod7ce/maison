@@ -1,4 +1,6 @@
 class Admin::GistsController < Admin::ApplicationController
+  before_filter :find_gist, :only => [:edit, :update, :destroy]
+
   def index
     @gists = Gist.where(user: current_user).page(params[:page])
   end
@@ -9,8 +11,7 @@ class Admin::GistsController < Admin::ApplicationController
   end
 
   def create
-    params.permit!
-    @gist = Gist.new(params[:gist])
+    @gist = Gist.new(gist_params)
     @gist.user = current_user
     if @gist.save()
       redirect_to admin_gists_path
@@ -20,14 +21,10 @@ class Admin::GistsController < Admin::ApplicationController
   end
 
   def edit
-    @gist = Gist.find(params[:id])
   end
 
   def update
-    @gist = Gist.find(params[:id])
-    @gist.user = current_user
-    params.permit!
-    if @gist.update_attributes(params[:gist])
+    if @gist.update_attributes(gist_params)
       redirect_to admin_gists_path
     else
       render action: 'edit'
@@ -35,7 +32,16 @@ class Admin::GistsController < Admin::ApplicationController
   end
 
   def destroy
-    Gist.find(params[:id]).delete()
+    @gist.delete()
     redirect_to admin_gists_path
+  end
+
+  private
+  def gist_params
+    params.require(:gist).permit(:title, :alias, :tag_list, :summary, snippets_attributes: [:id, :filename, :language, :code, :_destroy])
+  end
+
+  def find_gist
+    @gist = Gist.find(params[:id])
   end
 end

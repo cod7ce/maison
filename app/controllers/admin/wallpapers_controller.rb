@@ -1,4 +1,6 @@
 class Admin::WallpapersController < Admin::ApplicationController
+  before_filter :find_wallpaper, :only => [:edit, :update, :destroy]
+
   def index
     @wallpapers = Wallpaper.page(params[:page])
   end
@@ -8,11 +10,7 @@ class Admin::WallpapersController < Admin::ApplicationController
   end
 
   def create
-    @wallpaper = Wallpaper.new
-    @wallpaper.name = params[:wallpaper][:name]
-    @wallpaper.picture = params[:wallpaper][:picture]
-    @wallpaper.author = params[:wallpaper][:author]
-    @wallpaper.copyright_link = params[:wallpaper][:copyright_link]
+    @wallpaper = Wallpaper.new(wallpaper_params)
     if @wallpaper.save
       redirect_to admin_wallpapers_path
     else
@@ -21,16 +19,10 @@ class Admin::WallpapersController < Admin::ApplicationController
   end
 
   def edit
-    @wallpaper = Wallpaper.find(params[:id])
   end
 
   def update
-    @wallpaper = Wallpaper.find(params[:id])
-    @wallpaper.name = params[:wallpaper][:name]
-    @wallpaper.picture = params[:wallpaper][:picture] if params[:wallpaper][:picture]
-    @wallpaper.author = params[:wallpaper][:author]
-    @wallpaper.copyright_link = params[:wallpaper][:copyright_link]
-    if @wallpaper.update
+    if @wallpaper.update_attributes(wallpaper_params)
       redirect_to admin_wallpapers_path
     else
       render :action => 'edit'
@@ -39,8 +31,16 @@ class Admin::WallpapersController < Admin::ApplicationController
   end
 
   def destroy
-    @wallpaper = Wallpaper.find(params[:id])
     @wallpaper.delete
     redirect_to admin_wallpapers_path
+  end
+
+  private
+  def wallpaper_params
+    params.require(:wallpaper).permit(:name, :picture, :author, :copyright_link)
+  end
+
+  def find_wallpaper
+    @wallpaper = Wallpaper.find(params[:id])
   end
 end

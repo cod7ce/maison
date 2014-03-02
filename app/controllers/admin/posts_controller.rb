@@ -1,4 +1,6 @@
 class Admin::PostsController < Admin::ApplicationController 
+  before_filter :find_post, :only => [:edit, :update, :destroy]
+
   def index
     @posts = Post.where(user: current_user).page(params[:page])
   end
@@ -8,8 +10,7 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def create
-    @post = Post.new
-    @post.construire_post(params[:post])
+    @post = Post.new(post_params)
     @post.user = current_user
     if @post.save()
       redirect_to admin_posts_path
@@ -19,13 +20,10 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
-    @post.construire_post(params[:post])
-    if @post.update
+    if @post.update_attributes(post_params)
       redirect_to admin_posts_path
     else
       render action: 'edit'
@@ -33,7 +31,16 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def destroy 
-    Post.find(params[:id]).delete()
+    @post.delete()
     redirect_to admin_posts_path
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:title, :alias, :summary, :category_id, :tag_list, :content)
+  end
+
+  def find_post
+    @post = Post.find(params[:id])
   end
 end
