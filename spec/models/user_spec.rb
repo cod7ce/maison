@@ -12,7 +12,7 @@ describe User do
   describe "auth?" do
     let( :user ) { create(:user) }
     
-    it "have no errors when use corrent info" do
+    it "have no errors when use correct info" do
       user.should be_auth
     end
     
