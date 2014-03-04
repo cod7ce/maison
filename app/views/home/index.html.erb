@@ -31,7 +31,7 @@
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" style="width: 560px;">
           <div class="modal-content">
-            <%= image_tag asset_path 'dailywallpaper.png' %>
+            <%= image_tag asset_path 'dailywallpaper.jpg' %>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
         <div class="modal fade" id="analogclockModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" style="width: 900px;">
             <div class="modal-content">
-              <%= image_tag (asset_path 'analogclock.png'), size: '900x560' %>
+              <%= image_tag (asset_path 'analogclock.jpg'), size: '900x560' %>
             </div>
           </div>
         </div>
@@ -93,15 +93,3 @@
     </div>
   </div>
 </div>
-<script> 
-  $.fn.fullpage({
-    loopHorizontal: false,
-    easing: 'easeInOutQuart',
-    scrollingSpeed: 1500,
-    paddingBottom: '30px',
-    navigation: true
-  }); 
-  $(document).on('ready page:load', function(){
-     $('#maison, #maison-github, .jumbotron p').addClass('active'); 
-  });
-</script>

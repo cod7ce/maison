@@ -12,7 +12,7 @@
               <%= link_to tag,posts_path %>
             <% end %>
           </li>
-          <li><span class="glyphicon glyphicon-user"></span><%= @gist.user.realname %></li>
+          <li><span class="glyphicon glyphicon-user"></span><%= @gist.user.name %></li>
           <li><span class="glyphicon glyphicon-time"></span><%= @gist.created_at.strftime('%Y-%m-%d') %></li>
         </ul>
       </div>

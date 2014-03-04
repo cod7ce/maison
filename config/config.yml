@@ -1,5 +1,6 @@
 defaults: &defaults
   app_name: "纸房子"
+  disqus_name: "zfz"
 
 development:
   <<: *defaults

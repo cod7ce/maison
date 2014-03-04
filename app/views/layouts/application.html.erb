@@ -19,7 +19,7 @@ Rails: <%= Rails.version %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%= "#{params[:controller]}-#{params[:action]}" %>">
   <%= render 'layouts/header' unless params[:controller] == 'home' && params[:action] == 'index' %>
   <%= yield %>
   <%= render 'layouts/footer' unless params[:controller] == 'home' && params[:action] == 'index' %>

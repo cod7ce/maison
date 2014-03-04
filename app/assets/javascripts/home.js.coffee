@@ -10,3 +10,22 @@ $ ->
     else 
       $('.header-wrapper').removeClass('header-close')
     initTop = scrollTop
+
+$(document).on "ready page:load", ->
+  if $('#home-index').length
+    $.fn.fullpage {
+      loopHorizontal: false,
+      easing: 'easeInOutQuart',
+      scrollingSpeed: 1500,
+      paddingBottom: '30px',
+      navigation: true,
+      afterRender: ->
+       $('#maison, #maison-github, .jumbotron p').addClass 'active';
+    }
+  if $('#home-about').length
+    $.fn.fullpage {
+      verticalCentered: true,
+      loopHorizontal: false,
+      scrollingSpeed: 150,
+      controlArrowColor: '#eee'
+    }
