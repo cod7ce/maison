@@ -26,3 +26,5 @@ module Maison
     config.i18n.default_locale = :zh
   end
 end
+
+I18n.enforce_available_locales = false
