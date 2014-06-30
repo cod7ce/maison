@@ -55,6 +55,7 @@ gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 
 # Use puma as the app server
 gem 'puma'
+gem 'newrelic_rpm'
 
 # Use debugger and rspec
 group :development,:test do

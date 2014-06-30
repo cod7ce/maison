@@ -113,6 +113,7 @@ GEM
     moped (1.5.1)
     multi_json (1.8.2)
     nested_form (0.3.2)
+    newrelic_rpm (3.9.0.229)
     origin (1.1.0)
     polyglot (0.3.3)
     puma (2.7.1)
@@ -205,6 +206,7 @@ DEPENDENCIES
   mongoid!
   mongoid-grid_fs!
   nested_form
+  newrelic_rpm
   puma
   rails (= 4.0.2)
   redcarpet
