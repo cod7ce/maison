@@ -9,7 +9,7 @@ class WallpapersController < ApplicationController
     wallpaper = Wallpaper.find(params[:id])
     content = wallpaper.picture.read
     if stale?(etag: content, last_modified: wallpaper.updated_at.utc, public: true)
-      send_data content, type: wallpaper.picture.file.content_type, disposition: "inline"
+      send_data content, type: wallpaper.picture.file.content_type, disposition: "attachment"
       expires_in 0, public: true
     end
   end

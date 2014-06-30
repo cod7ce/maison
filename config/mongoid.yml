@@ -1,4 +1,4 @@
-produce:
+production:
   # Configure available database sessions. (required)
   sessions:
     # Defines the default session. (required)
