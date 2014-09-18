@@ -14,7 +14,7 @@ class User
   field :homepage, type: String
   field :bio, type: String
 
-  default_scope desc(:created_at)
+  default_scope -> { desc(:created_at) }
 
   validates_presence_of :name, :email
   validates_uniqueness_of :email

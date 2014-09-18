@@ -7,6 +7,6 @@ class Wallpaper
 
   mount_uploader :picture, WallpaperUploader
 
-  default_scope desc(:created_at)
+  default_scope -> { desc(:created_at) }
 
 end

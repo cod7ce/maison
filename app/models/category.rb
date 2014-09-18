@@ -5,7 +5,7 @@ class Category
 
   has_many :posts
 
-  default_scope desc(:name)
+  default_scope -> { desc(:name) }
 
   validates_presence_of :name, :code
   validates_uniqueness_of :code

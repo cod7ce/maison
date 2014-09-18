@@ -6,7 +6,7 @@ class Gist
   field :tags, type: Array
   field :alias, type: String
 
-  default_scope desc(:created_at)
+  default_scope -> { desc(:created_at) }
 
   validates_presence_of :title, :alias
   validates_uniqueness_of :alias

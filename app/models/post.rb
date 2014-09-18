@@ -7,7 +7,7 @@ class Post
   field :tags, type: Array
   field :alias, type: String
 
-  default_scope desc(:created_at)
+  default_scope -> { desc(:created_at) }
 
   validates_presence_of :title, :content, :alias
   validates_uniqueness_of :alias

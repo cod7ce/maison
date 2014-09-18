@@ -1,7 +1,7 @@
 source 'http://ruby.taobao.org/'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.5'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -38,7 +38,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem "mongoid", github: 'mongoid/mongoid', ref: '11e45e5a30a45458b83db99ab6c9d9ccc337e66f'
+gem 'mongoid', '4.0.0'
 gem 'kaminari'
 
 gem "bootstrap-sass", '~> 3.0.3.0'
@@ -57,9 +57,8 @@ gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 gem 'puma'
 gem 'newrelic_rpm'
 
-# Use debugger and rspec
-group :development,:test do
-  gem 'debugger'
+# Use rspec
+group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
